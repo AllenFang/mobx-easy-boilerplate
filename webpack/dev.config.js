@@ -35,6 +35,12 @@ module.exports = {
       test: /\.css$/,
       loader: 'style!css?sourceMap!postcss',
       exclude: /node_modules/
+    }, {
+      test: /\.png$/,
+      loader: 'file?name=[name].[ext]',
+    }, {
+      test: /\.jpg$/,
+      loader: 'file?name=[name].[ext]',
     }]
   },
   plugins: [
