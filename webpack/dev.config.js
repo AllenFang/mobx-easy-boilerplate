@@ -31,6 +31,10 @@ module.exports = {
       test: /\.(js|jsx)$/,
       loaders: ['babel'],
       exclude: /node_modules/,
+    }, {
+      test: /\.css$/,
+      loader: 'style!css?sourceMap!postcss',
+      exclude: /node_modules/
     }]
   },
   plugins: [
