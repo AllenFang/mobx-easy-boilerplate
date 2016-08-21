@@ -9,11 +9,11 @@ export default class Header extends Component {
     return (
       <section>
         <h1>
-          <a href='https://html5bones.com'>
-            <abbr title='HyperText Markup Language 5'>HTML5</abbr> Bones
+          <a href='#'>
+            <abbr title='Mobx-react-boilerplage'>Mobx</abbr> Boilerplate
           </a>
         </h1>
-        <h2>Back to basics</h2>
+        <h2></h2>
       </section>
     );
   }
