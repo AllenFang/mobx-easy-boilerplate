@@ -1,20 +1,12 @@
-/* eslint react/prefer-stateless-function: 0 */
-/* eslint jsx-a11y/href-no-hash: 0 */
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router';
 
 require('../../styles/header.css');
 
-export default class Header extends Component {
-  render() {
-    return (
-      <section>
-        <h1>
-          <a href='#'>
-            <abbr title='Mobx-react-boilerplage'>Mobx</abbr> Boilerplate
-          </a>
-        </h1>
-        <h2></h2>
-      </section>
-    );
-  }
-}
+const Header = () =>
+  <ul className='nav-ul'>
+    <li><Link to='/'>Home</Link></li>
+    <li><Link to='/timer'>Timer Demo</Link></li>
+  </ul>;
+
+export default Header;
