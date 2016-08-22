@@ -13,7 +13,6 @@ export default class Title extends Component {
             <abbr title='Mobx-Easy-Boilerplate'>Mobx</abbr> Easy Boilerplate
           </a>
         </h1>
-        <h3>mobx-easy-boilerplate is a react & mobx boilderplate</h3>
       </section>
     );
   }
