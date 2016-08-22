@@ -3,7 +3,7 @@ ul.nav-ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #7d4b4b;
 }
 ul.nav-ul > li {
   float: left;
@@ -18,7 +18,7 @@ ul.nav-ul > li a {
 }
 
 ul.nav-ul > li a:hover {
-  background-color: #111;
+  background-color: #502222;
 }
 
 ul.nav-ul > li { padding:.3em 0; }
