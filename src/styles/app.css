@@ -50,6 +50,13 @@ ul {
   opacity:0.9;
 }
 .button .version { font-weight:normal; }
+
+.buttons {
+  text-align:center;
+  overflow:hidden;
+  margin-bottom:1em;
+}
+
 footer {
    left:0px;
    bottom:0px;
