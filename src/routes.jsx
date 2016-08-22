@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import AppRoute from './routers/app';
-import HomeRoute from './routers/home';
-import TimerRoute from './routers/timer';
+import AppRoute from './container/app';
+import HomeRoute from './container/home';
+import TimerRoute from './container/timer';
 
 export default (
   <Route path='/' component={ AppRoute }>
