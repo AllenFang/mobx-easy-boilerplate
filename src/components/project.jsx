@@ -35,10 +35,25 @@ const PROJECTS = [ {
   className: 'column-right',
   img: 'karma-logo.png',
   name: 'karma'
+}, {
+  url: 'http://andreykeske.com',
+  className: 'column-center',
+  img: 'eslint-logo.png',
+  name: 'eslint'
+}, {
+  url: 'http://andreykeske.com',
+  className: 'column-left',
+  img: 'mocha-logo.png',
+  name: 'mocha'
+}, {
+  url: 'http://andreykeske.com',
+  className: 'column-right',
+  img: 'react-hot-loader-logo.png',
+  name: 'react-hot-loader'
 } ];
 
 const mapProj = proj =>
-  <div className='project'>
+  <div key={ proj.name } className='project'>
     <a href={ proj.url }>
       <img
         alt={ proj.name }
