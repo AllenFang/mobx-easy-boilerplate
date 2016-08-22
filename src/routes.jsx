@@ -11,5 +11,3 @@ export default (
     <Route path='timer' component={ TimerRoute } />
   </Route>
 );
-
-// <Route path="notes" component={ Notes } />
