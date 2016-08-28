@@ -4,8 +4,9 @@
   "description": "It's a boilerplate for react and mobx",
   "main": "index.js",
   "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production webpack --progress --verbose --display-error-details --config ./webpack/common.config.js",
     "dev": "NODE_ENV=development node ./bin/server.js",
-    "test": "babel-node ./node_modules/.bin/karma start"
+    "test": "NODE_ENV=development babel-node ./node_modules/.bin/karma start"
   },
   "keywords": [
     "react",
@@ -24,6 +25,7 @@
     "react-router": "^2.6.1"
   },
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.4",
@@ -40,6 +42,7 @@
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.0.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "karma": "^1.2.0",
     "karma-chai-plugins": "^0.7.0",
@@ -49,13 +52,15 @@
     "karma-webpack": "^1.8.0",
     "mocha": "^3.0.2",
     "mocka": "0.0.1",
+    "postcss-import": "^8.1.2",
     "postcss-loader": "^0.10.1",
     "react-addons-test-utils": "^15.3.0",
     "react-hot-loader": "^3.0.0-beta.2",
     "sinon": "^1.17.5",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
-    "webpack-dashboard": "^0.1.6",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dashboard": "^0.1.8",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.1"
   }
 }

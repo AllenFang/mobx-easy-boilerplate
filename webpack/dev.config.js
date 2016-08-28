@@ -6,8 +6,7 @@ const DashboardPlugin = require('webpack-dashboard/plugin');
 const dashboard = new Dashboard();
 
 const PATHS = {
-  app: path.join(__dirname, '../src'),
-  build: path.join(__dirname, '../dist'),
+  build: path.join(__dirname, '../dist')
 };
 
 module.exports = {
@@ -20,39 +19,21 @@ module.exports = {
   ],
   output: {
     path: PATHS.build,
-    filename: 'bundle.js',
-    publicPath: '/static/'
-  },
-  resolve: {
-    extensions: ['', '.jsx', '.js', '.json'],
-    modulesDirectories: ['node_modules', PATHS.app],
+    filename: '[name].js',
+    publicPath: '/dist/'
   },
   module: {
     preLoaders: [
         { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'eslint' }
     ],
     loaders: [{
-      test: /\.(js|jsx)$/,
-      loaders: ['babel'],
-      exclude: /node_modules/,
-    }, {
-      test: /\.css$/,
-      loader: 'style!css?sourceMap!postcss',
-      exclude: /node_modules/
-    }, {
-      test: /\.png$/,
-      loader: 'file?name=[name].[ext]',
-    }, {
-      test: /\.jpg$/,
-      loader: 'file?name=[name].[ext]',
-    }]
+        test: /\.css$/,
+        loader: 'style!css?sourceMap!postcss-loader',
+        exclude: /node_modules/
+      }
+    ]
   },
   plugins: [
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"development"',
-      }
-    }),
     new DashboardPlugin(dashboard.setData),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
