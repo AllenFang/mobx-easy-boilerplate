@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 const PATHS = {
   app: path.join(__dirname, '../src'),
+  test: path.join(__dirname, '../test'),
   build: path.join(__dirname, '../dist'),
 };
 
@@ -40,11 +41,16 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"',
+      }
+    }),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
   ],
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    modulesDirectories: ['node_modules', PATHS.app]
+    modulesDirectories: ['node_modules', PATHS.app, PATHS.test]
   }
 };

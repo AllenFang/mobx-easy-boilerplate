@@ -16,12 +16,16 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    PATHS.app
+    './src/index'
   ],
   output: {
     path: PATHS.build,
     filename: 'bundle.js',
     publicPath: '/static/'
+  },
+  resolve: {
+    extensions: ['', '.jsx', '.js', '.json'],
+    modulesDirectories: ['node_modules', PATHS.app],
   },
   module: {
     preLoaders: [
@@ -44,12 +48,13 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"',
+      }
+    }),
     new DashboardPlugin(dashboard.setData),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin()
-  ],
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-    modulesDirectories: ['node_modules', PATHS.app]
-  }
+  ]
 };
