@@ -26,7 +26,7 @@ export default class AppRoute extends React.Component {
           </Provider>
         </main>
         <Footer />
-        <DevTools />
+        { process.env.NODE_ENV === 'development' ? <DevTools /> : null }
       </div>
     );
   }
