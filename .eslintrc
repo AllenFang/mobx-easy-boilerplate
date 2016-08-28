@@ -5,7 +5,6 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
     "mocha": true
   },
   "globals": {
@@ -33,6 +32,8 @@
     "react/sort-comp": 0,
     "react/jsx-no-bind": 0,
 
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
     "quotes": [2, "single", "avoid-escape"],
     "jsx-quotes": [2, "prefer-single"],
     "comma-dangle": [2, "never"],
