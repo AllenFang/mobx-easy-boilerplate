@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-require('../styles/project.css');
+require('styles/project.css');
 
 const PROJECTS = [ {
   url: 'http://gradusdevelopment.com',

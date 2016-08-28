@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-require('../../styles/header.css');
+require('styles/header.css');
 
 const Header = () =>
   <ul className='nav-ul'>

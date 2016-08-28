@@ -3,12 +3,12 @@ import React, { PropTypes } from 'react';
 import { Provider } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
 
-import Title from '../components/title';
-import Header from '../components/shared/header';
-import Footer from '../components/shared/footer';
-import timerStore from '../stores/timer';
+import Title from 'components/title';
+import Header from 'components/shared/header';
+import Footer from 'components/shared/footer';
+import timerStore from 'stores/timer';
 
-require('../styles/app.css');
+require('styles/app.css');
 
 export default class AppRoute extends React.Component {
   static propTypes = {

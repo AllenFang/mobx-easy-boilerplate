@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { observer } from 'mobx-react';
 
-require('../styles/timer.css');
+require('styles/timer.css');
 
 @observer([ 'timerStore' ])
 class TimerRoute extends Component {

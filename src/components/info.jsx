@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('../styles/info.css');
+require('styles/info.css');
 
 const Info = () =>
   <section className='buttons'>
