@@ -20,9 +20,3 @@ ul.nav-ul > li a {
 ul.nav-ul > li a:hover {
   background-color: #502222;
 }
-
-ul.nav-ul > li { padding:.3em 0; }
-
-/*.active {
-  background-color: #4CAF50;
-}*/
